@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #button_back {
+
+
+
+}
+
+.button_2 {
+
+  position: fixed;
+  margin-bottom: 135%;
+  margin-right: 90%;
+  height: 50px;
+  width: 50px;
+  /* background-color: rgb(0, 0, 0); */
+  /* border-radius: 50%; */
+  display: inline-block;
+z-index: 999;
+}
+
+.button_2:before, .button_2:after {
+  position: fixed;
+  margin-right: 90%;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.button_2:before {
+  transform: rotate(45deg);
+}
+.button_2:after {
+  transform: rotate(-45deg);
+}
+
+      </style>
+
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <title>Camera Obscura</title>
+  </head>
+  <body>
+    <script type="module" src="/main.js"></script>
+    <div id="close" class="hidden fixed z-20 top-0 right-0 p-6 cursor-pointer">
+      <svg
+        width="36"
+        height="36"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <use href="feather-sprite.svg#x" />
+      </svg>
+    </div>
+    <div
+      class="fixed z-20 bottom-0 w-full p-10 flex items-center justify-center transition-all"
+    >
+
+    <button
+    id="button-back"
+    class="button_2"
+  >
+    
+  </button>
+
+      <button
+        id="button"
+        class="w-16 h-16 bg-white rounded-full grid place-items-center no-border"
+      >
+        <svg class="animate-spin transition-all" viewBox="0 0 24 24">
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="white"
+            fill="none"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="white"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      id="target"
+      class="fixed -translate-y-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-5xl text-center left-1/2 top-1/2 p-6 break-words hyphens-none overflow-x-hidden w-full"
+    ></div>
+  </body>
+</html>
